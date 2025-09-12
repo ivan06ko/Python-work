@@ -1,6 +1,6 @@
-num1 = float(input("Вставте перше число: "))
-operation = input("Вставте операцію (+, -, *, /): ")
-num2 = float(input("Вставте друге число: "))
+num1 = float(input("Ваше перше число: "))
+operation = input("Впишіть операцію (+, -, *, /): ")
+num2 = float(input("Ваше друге число: "))
 
 if operation == "+":
     result = num1 + num2
@@ -12,9 +12,9 @@ elif operation == "/":
     if num2 != 0:
         result = num1 / num2
     else:
-        result = "Помилка: ділення на нуль!"
+        result = "Помилка: ділити на нуль не можна"
 else:
-    result = "Помилка: невідома операція!"
+    result = "Помилка"
 
 # результат
 print("Результат:", result)
