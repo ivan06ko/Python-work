@@ -18,3 +18,5 @@ else:
 
 # результат
 print("Результат:", result)
+
+#1000 - 1000 = 8?! stupid calculator! 
