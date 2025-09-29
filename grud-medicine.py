@@ -16,11 +16,11 @@ elif m["температура"] > 25: temp = "надто жарко"
 else:temp = "температура в нормі"
 
 match m["категорія"]:
-    case "antibiotic": cat = "рецептурний препаратик"
-    case "vitamin": cat = "Вільний продаж"
-    case "vaccine": cat = "потребує бути в спеціальних умовах прожиття"
-    case _: cat = "Решта"
+    case "antibiotic": meow = "рецептурний препаратик"
+    case "vitamin": meow = "Вільний продаж"
+    case "vaccine": meow = "потребує бути в спеціальних умовах прожиття"
+    case _: meow = "Решта"
 
-print(f"{m['назва']}: {cat}, {temp}")
+print(f"{m['назва']}: {meow}, {temp}")
 
 #prolly last prototype before release
