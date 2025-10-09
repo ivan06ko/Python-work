@@ -1,4 +1,5 @@
-# Clients from the anywhere
+# Clients from the anywhere of the different dimenisions
+
 clients = [
     {"ім'я": "Сетлер", "сума угоди": 50, "статус перевірки": "clean"},
     {"ім'я": "Привид 3ої дивізії", "сума угоди": 700, "статус перевірки": "suspicious"},
