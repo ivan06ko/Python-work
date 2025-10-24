@@ -18,7 +18,7 @@ class JunkItem:
         return f"{self.name} (x{self.quantity}, {self.value} грн)"
 
 class JunkStorage:
-    SEP = '|'
+    SEP = '|' # SEP це вроді роздільник? чи Вересень? я забувся 
 
     @staticmethod
     def _encode(x: float) -> str:
@@ -44,7 +44,7 @@ class JunkStorage:
             for i, line in enumerate(f, 1):
                 parts = [p.strip() for p in line.strip().split(JunkStorage.SEP)]
                 if len(parts) != 3:
-                    print(f"Цей  Рядок {i}: неправельний формат, пропускаю")
+                    print(f"Цей  Рядок {i}:  неправельний формат, пропускаю")
                     continue
                 name, qty, val = parts
                 try:
