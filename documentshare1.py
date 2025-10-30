@@ -1,13 +1,12 @@
 from abc import ABC, abstractmethod
 from typing import Type, Dict, Tuple
 
-# ---- Інтерфейс ----
 class Document(ABC):
     @abstractmethod
     def render(self) -> str:
         ...
 
-# ---- Конкретні документи ----
+#Конкретні документи 
 class Report(Document):
     def __init__(self, title: str, summary: str):
         self.title = title
@@ -39,7 +38,7 @@ class Contract(Document):
             f"Умови: {self.terms}\n"
         )
 
-# ---- Null-об’єкт ----
+# Null Object
 class NullDocument(Document):
     def __init__(self, doc_type: str):
         self.doc_type = doc_type
@@ -47,7 +46,7 @@ class NullDocument(Document):
     def render(self) -> str:
         return f"[Невідомий тип: '{self.doc_type}']\n"
 
-# ---- Проста фабрика ----
+# Фабрика
 class DocumentFactory:
     _registry: Dict[str, Type[Document]] = {
         "report": Report,
@@ -68,7 +67,7 @@ class DocumentFactory:
     def register(doc_type: str, cls: Type[Document]) -> None:
         DocumentFactory._registry[doc_type.lower()] = cls
 
-# ---- Приклад ----
+# Наглядний приклад 
 if __name__ == "__main__":
     documents = [
         DocumentFactory.create("report", title="Q3 2025", summary="Стабільне зростання."),
