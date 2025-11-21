@@ -122,4 +122,4 @@ def run_simulation(number, num_runners=5):
 if __name__ == "__main__":
     for i in range(1, 3 + 1):
         run_simulation(i)
-        time.sleep(1) 
+        time.sleep(1)   
