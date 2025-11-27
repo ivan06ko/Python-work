@@ -63,7 +63,7 @@ class Runner(threading.Thread):
 def show_progress(runners):
     print("\nПрогрес бігунів:")
     for r in runners:
-        bar_len = 20
+        bar_len = 20 #test test test. is it working?
         filled = int(bar_len * r.done / r.attempts)
         bar = "#" * filled + "." * (bar_len - filled)
 
