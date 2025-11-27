@@ -1,0 +1,19 @@
+АНАЛІТИЧНИЙ ЗВІТ ПО ПОСТАВКАХ
+
+Середні показники (NumPy):
+  • Середня ціна всіх препаратів (price_per_unit): 4.52
+  • Медіана кількості (quantity): 100.00
+  • Стандартне відхилення ціни (price_per_unit): 2.95
+
+Постачальник з найбільшим загальним прибутком:
+  • BioPharm (загальний прибуток: 1336.00)
+
+Файл із дефіцитними поставками:
+  • low_supply.csv
+
+Перші три рядки за total_price (найдорожчі поставки):
+
+supplier category  quantity  price_per_unit       date  total_price
+ImmuniCo  Vaccine        70             8.5 2024-06-08        595.0
+ImmuniCo  Vaccine        60             9.0 2024-05-22        540.0
+VitaPlus  Vitamin       350             1.5 2024-05-18        525.0
