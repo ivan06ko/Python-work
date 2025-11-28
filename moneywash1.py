@@ -19,13 +19,13 @@ def shadow(*, limit: float = 200.0) -> Callable[[Callable[..., Iterable[str]]], 
     def decorator(gen_func: Callable[..., Iterable[str]]) -> Callable[..., Generator[str, None, float]]:
         def wrapper(*args, **kwargs) -> Generator[str, None, float]:
             total = 0.0                     # накопичення
-            over = False                    # стан "понад ліміт"
+            over = False                    # понад лімітний стан
             gen = gen_func(*args, **kwargs) # оригінальний стрім
 
             for raw in gen:
                 parsed = parse_tx(raw)
                 if parsed is None:
-                    # некоректне - ігноруємо 
+                    # некоректне ігнорує
                     continue
 
                 kind, amount = parsed
@@ -49,7 +49,7 @@ def shadow(*, limit: float = 200.0) -> Callable[[Callable[..., Iterable[str]]], 
         return wrapper
     return decorator
 
-@shadow(limit=200)  # можна змінити ліміт тут
+@shadow(limit=200)  # можна змінити ліміт по потребі
 def tx_stream() -> Iterable[str]:
     # по черзі віддаємо сирі рядки
     data = [
