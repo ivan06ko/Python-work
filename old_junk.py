@@ -99,16 +99,13 @@ class Inventory:
 
     def sort_items(self, key: str | None = None, reverse: bool = False) -> list[Item]:
         if key is None:
-            return sorted(self.items, reverse=reverse)   # за category, потім value
+            return sorted(self.items, reverse=reverse)  
         return sorted(self.items, key=lambda i: getattr(i, key), reverse=reverse)
 
-
-# --- Невеликий демо-блок, щоб БУЛА відповідь при запуску файлу ---
 
 if __name__ == "__main__":
     inv = Inventory()
 
-    # Додаємо кілька тестових предметів
     inv.add_item(Item(
         category="інструменти",
         value=15.0,
