@@ -6,8 +6,8 @@ import pandas as pd
 class FIIncViewer(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("FI-INC — Offline Incident Viewer")
-        self.geometry("900x520")
+        self.title("FI-INC - Сектрента орагнізація по скриттю Грецького Йогурту.")
+        self.geometry("1280x960")
 
         self.df = None 
         self._build_ui()
@@ -65,7 +65,6 @@ class FIIncViewer(tk.Tk):
                 pass
         raise ValueError("Failed to read CSV (bad encoding/format).")
 
-    # ---- view ----
     def show(self, df: pd.DataFrame):
         self.tree.delete(*self.tree.get_children())
         cols = list(df.columns)
